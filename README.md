@@ -4,8 +4,13 @@ An example project showcasing the features of [Guzzle](http://guzzlephp.org) Ser
 
 ## Getting Started
 
-1. Installing package dependencies with `composer install`.
-2. Generate a Seed File
+1. Create a config file.
+2. Installing package dependencies with `composer install`.
+3. Generate a Seed File
+
+### Configuration
+
+Copy `config/config.php.dist` to `config/config.php` and modify it suit your environment.
 
 ### Installing Dependencies
 
