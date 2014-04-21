@@ -57,7 +57,7 @@ class WordsController extends AbstractController
             $collection = $this->wm->add($word);
             $position   = array_search($word, $collection);
 
-            return new JsonResponse('', 201, array(
+            return new Response('', 201, array(
                 'Location' => sprintf('http://localhost:8787/words/%d', $position)
             ));
         }
