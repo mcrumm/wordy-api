@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+use Silex\Provider\MonologServiceProvider;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+set_time_limit(0);
+
+/** @var \Silex\Application $app */
+$app    = require __DIR__.'/../src/app.php';
+$input  = new ArgvInput();
+$output = new ConsoleOutput();
+
+// Console Command Logger
+$app->register(new MonologServiceProvider(), array(
+    'monolog.name' => 'wordy',
+    'monolog.logfile' => __DIR__.'/../var/logs/console.log',
+));
+
+/** @var Symfony\Component\Console\Application $console */
+$console = require __DIR__.'/../src/console.php';
+$console->run($input, $output);
