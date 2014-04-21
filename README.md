@@ -23,7 +23,7 @@ $ cd /path/to/wordy-api
 $ php composer.phar install
 ```
 
-### Seed File
+### Grnerate a Seed File
 
 The following will generate an initial seed file, which should keep the API from throwing undue errors.
 
