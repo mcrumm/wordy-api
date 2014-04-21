@@ -7,6 +7,22 @@ An example project showcasing the features of [Guzzle](http://guzzlephp.org) Ser
 1. Installing package dependencies with `composer install`.
 2. Generate a Seed File
 
+### Installing Dependencies
+
+First, install composer:
+
+```bash
+$ cd /path/to/wordy-api
+$ curl -sS https://getcomposer.org/installer | php
+```
+
+Next, install project dependencies:
+
+```bash
+$ cd /path/to/wordy-api
+$ php composer.phar install
+```
+
 ### Seed File
 
 The following will generate an initial seed file, which should keep the API from throwing undue errors.
